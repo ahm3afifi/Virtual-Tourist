@@ -32,6 +32,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Virtual Tourist" id="8D3-hu-oxJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="DGT-x6-U9a" id="8mw-30-FLK"/>
+                        <segue destination="RGL-bu-g7b" kind="show" identifier="showPhotoAlbum" id="aWe-dE-eEC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,13 +50,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="MI5-yI-dXb">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-f2-PtS">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190.5"/>
                                     </mapView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QNz-TK-Jil">
-                                        <rect key="frame" x="0.0" y="199.5" width="414" height="568"/>
+                                        <rect key="frame" x="0.0" y="190.5" width="414" height="542"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kdv-XU-fyo">
                                             <size key="itemSize" width="149" height="144"/>
@@ -78,7 +82,7 @@
                                         </cells>
                                     </collectionView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-ys-tYK">
-                                        <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="732.5" width="414" height="41.5"/>
                                         <items>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="q2i-bT-dwG"/>
                                             <barButtonItem title="New Collection" id="wWq-wi-OnC"/>

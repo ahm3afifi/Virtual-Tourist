@@ -6,9 +6,13 @@
 //  Copyright © 2019 Ahmed Afifi. All rights reserved.
 //
 
-import Foundation
+import MapKit
 import UIKit
+import CoreData
 
-class TravelLocationMapViewController: UIViewController {
+class TravelLocationMapViewController: UIViewController, MKMapViewDelegate, NSFetchedResultsControllerDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     
 }
