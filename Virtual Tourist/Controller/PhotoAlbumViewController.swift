@@ -41,6 +41,7 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, MK
         collectionView.delegate = self
         configMap()
         setupFetchedResultsController()
+        autoFetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -137,6 +138,30 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, MK
     }
     
     
+    func autoFetch() {
+        FlickrClient.sharedInstance().downloadPhotosForLocation1(lat: pin.latitude, lon: pin.longitude) { (success, urls) in
+            guard let urls = urls else {
+                print("no url's returned in completion handler")
+                return
+            }
+            if (success == false) {
+                print("JSON DL did not complete")
+                return
+            }
+            self.urlsToDownload.append(contentsOf: urls)
+            DispatchQueue.main.async {
+                for url in urls {
+                    let photo = Photo(context: self.dataController.viewContext)
+                    photo.name = url.absoluteString
+                    photo.location = self.pin
+                    try? self.dataController.viewContext.save()
+                }
+                print("urlsToDownload count: \(self.urlsToDownload.count)\nurls: \(self.urlsToDownload)")
+            }
+        }
+    }
+    
+    
     @IBAction func newCollectionButtonPressed(_ sender: UIBarButtonItem) {
         
         if let fetchedObjects = fetchedResultsController.fetchedObjects {
@@ -144,6 +169,7 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, MK
             for photo in fetchedObjects {
                 print("photo info: \(photo.image!.description)")
                 dataController.viewContext.delete(photo)
+                try? dataController.viewContext.save()
             }
         } else {
             print("no fetched photos present to delete for NewCollection")
@@ -252,6 +278,7 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, MK
         cell.backgroundColor = UIColor.darkGray
         cell.locationPhoto.alpha = 0.5
         cell.addSubview(activityIndicator)
+        cell.locationPhoto.image = #imageLiteral(resourceName: "Placeholder - 120x120")
         activityIndicator.startAnimating()
         
         let photo = fetchedResultsController.object(at: indexPath)
