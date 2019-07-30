@@ -141,7 +141,7 @@ class FlickrClient: NSObject {
     }
     
     
-    func makeImageDataFrom1(flickrURL: URL) -> Data? {
+    func makeImageDataFrom(flickrURL: URL) -> Data? {
         return try? Data(contentsOf: flickrURL)
     }
     

@@ -17,6 +17,7 @@
 		76B4107222ED239700B993A3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4107122ED239700B993A3 /* DataController.swift */; };
 		76F30A7622EDD5AC000AEA13 /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F30A7522EDD5AC000AEA13 /* FlickrClient.swift */; };
 		76F30A7822EDD6EB000AEA13 /* FlickerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F30A7722EDD6EB000AEA13 /* FlickerConstants.swift */; };
+		76F30A7B22EDF0A3000AEA13 /* LocationImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F30A7A22EDF0A3000AEA13 /* LocationImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +27,12 @@
 		76B4105E22ED1D6500B993A3 /* Virtual_Tourist.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Virtual_Tourist.xcdatamodel; sourceTree = "<group>"; };
 		76B4106022ED1D6500B993A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76B4106322ED1D6500B993A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		76B4106522ED1D6500B993A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76B4106B22ED1DAF00B993A3 /* TravelLocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelLocationMapViewController.swift; sourceTree = "<group>"; };
 		76B4106E22ED1DEC00B993A3 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		76B4107122ED239700B993A3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		76F30A7522EDD5AC000AEA13 /* FlickrClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrClient.swift; sourceTree = "<group>"; };
 		76F30A7722EDD6EB000AEA13 /* FlickerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerConstants.swift; sourceTree = "<group>"; };
+		76F30A7A22EDF0A3000AEA13 /* LocationImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +65,13 @@
 		76B4105522ED1D6500B993A3 /* Virtual Tourist */ = {
 			isa = PBXGroup;
 			children = (
+				76F30A7922EDF094000AEA13 /* View */,
 				76B4107022ED238500B993A3 /* Model */,
 				76B4105622ED1D6500B993A3 /* AppDelegate.swift */,
 				76B4106D22ED1DD100B993A3 /* Controller */,
 				76B4105A22ED1D6500B993A3 /* Main.storyboard */,
 				76B4106022ED1D6500B993A3 /* Assets.xcassets */,
 				76B4106222ED1D6500B993A3 /* LaunchScreen.storyboard */,
-				76B4106522ED1D6500B993A3 /* Info.plist */,
 				76B4105D22ED1D6500B993A3 /* Virtual_Tourist.xcdatamodeld */,
 			);
 			path = "Virtual Tourist";
@@ -93,6 +94,14 @@
 				76F30A7722EDD6EB000AEA13 /* FlickerConstants.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		76F30A7922EDF094000AEA13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76F30A7A22EDF0A3000AEA13 /* LocationImageCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +178,7 @@
 				76B4107222ED239700B993A3 /* DataController.swift in Sources */,
 				76B4106C22ED1DAF00B993A3 /* TravelLocationMapViewController.swift in Sources */,
 				76B4105F22ED1D6500B993A3 /* Virtual_Tourist.xcdatamodeld in Sources */,
+				76F30A7B22EDF0A3000AEA13 /* LocationImageCollectionViewCell.swift in Sources */,
 				76F30A7822EDD6EB000AEA13 /* FlickerConstants.swift in Sources */,
 				76B4106F22ED1DEC00B993A3 /* PhotoAlbumViewController.swift in Sources */,
 				76B4105722ED1D6500B993A3 /* AppDelegate.swift in Sources */,
