@@ -1,6 +1,6 @@
 # Virtual-Tourist
 
-Tour the world without leaving the comforts of your couch! Virtual Tourist lets you tour the world from the comfort of your own couch. Users is able to drop pins on a map and download pictures for the location.
+Tour the world without leaving the comforts of your couch! Virtual Tourist lets you tour all over the world from your place. Users is able to drop pins on a map and download pictures for the location.
 
 # Libraries and Frameworks Used
 
