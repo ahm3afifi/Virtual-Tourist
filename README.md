@@ -1,6 +1,10 @@
 # Virtual-Tourist
 
-Tour the world without leaving the comforts of your couch! Virtual Tourist lets you tour all over the world from your place. Users is able to drop pins on a map and download pictures for the location.
+Virtual Tourist lets you see pictures taken from different places all over the world. Users is able to drop pins on a map and download pictures for the chosen location.
+
+# Preview
+
+<img width = "300" src = "https://user-images.githubusercontent.com/30387348/72662177-9c4ca800-39fd-11ea-892d-0e713f29e80a.png" /> <img width = "300" src = "https://user-images.githubusercontent.com/30387348/72662178-9e166b80-39fd-11ea-9276-a7b23820fc0e.png" />
 
 # Libraries and Frameworks Used
 
